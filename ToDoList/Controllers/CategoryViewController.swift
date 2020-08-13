@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import SwipeCellKit
 
-class CategoryViewController: UITableViewController, SwipeTableViewCellDelegate {
+class CategoryViewController: UITableViewController {
     
     var categories = [Category]()
     
@@ -20,6 +20,8 @@ class CategoryViewController: UITableViewController, SwipeTableViewCellDelegate 
         super.viewDidLoad()
         
         loadCategories()
+        
+        tableView.rowHeight = 90.0
     }
     
     //MARK: - TableView Datasource Methods
@@ -104,4 +106,38 @@ class CategoryViewController: UITableViewController, SwipeTableViewCellDelegate 
 }
 
 //MARK - Swipe Cell Delegate Methods
-extension CategoryViewController: SwipeTableViewCellDelegate
+extension CategoryViewController: SwipeTableViewCellDelegate {
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+
+        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+            //handle action by updating model with deletion
+            
+                do{
+                    try self.context.delete(self.categories[indexPath.row])
+                    try self.categories.remove(at: indexPath.row)
+                } catch {
+                    print("error deleting category, \(error)")
+                }
+            
+            
+            self.saveCategories()
+        }
+
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete-icon")
+
+        return [deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        
+        var options = SwipeTableOptions()
+        
+        options.expansionStyle = .destructive
+        //options.transitionStyle = .border
+        
+        return options
+    }
+}
