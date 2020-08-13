@@ -14,6 +14,7 @@
 		CD223C9924E45CE40007CE1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD223C9824E45CE40007CE1C /* Assets.xcassets */; };
 		CD223C9C24E45CE40007CE1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD223C9A24E45CE40007CE1C /* LaunchScreen.storyboard */; };
 		CD223CAA24E582D20007CE1C /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD223CA824E582D20007CE1C /* DataModel.xcdatamodeld */; };
+		CD223CCF24E5979D0007CE1C /* CategoryViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD223CCE24E5979D0007CE1C /* CategoryViewControllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CD223C9B24E45CE40007CE1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD223C9D24E45CE40007CE1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD223CA924E582D20007CE1C /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		CD223CCE24E5979D0007CE1C /* CategoryViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		CD223CA724E5705B0007CE1C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD223CCE24E5979D0007CE1C /* CategoryViewControllerTableViewController.swift */,
 				CD223C9324E45CE30007CE1C /* ToDoListViewController.swift */,
 			);
 			path = Controllers;
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD223CCF24E5979D0007CE1C /* CategoryViewControllerTableViewController.swift in Sources */,
 				CD223CAA24E582D20007CE1C /* DataModel.xcdatamodeld in Sources */,
 				CD223C9424E45CE30007CE1C /* ToDoListViewController.swift in Sources */,
 				CD223C9024E45CE30007CE1C /* AppDelegate.swift in Sources */,
