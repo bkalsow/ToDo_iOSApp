@@ -25,9 +25,9 @@ class ToDoListViewController: UITableViewController {
         let newItem2 = Item()
         newItem2.title = "Summmon Dragun of Red-Eyes"
 
-        /** if let items = defaults.array(forKey: "ToDoListArray") as? [String] {
+        if let items = defaults.array(forKey: "ToDoListArray") as? [Item] {
             itemArray = items
-        } */
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,12 +42,9 @@ class ToDoListViewController: UITableViewController {
         cell.textLabel?.text = item.title
         
         //load whether item is done or not
-        
-        if item.done == true {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
+        //ternary operator
+                            //value == condition ? ifTrue : ifFalse
+        cell.accessoryType = item.done ? .checkmark : .none
         
         return cell
     }
