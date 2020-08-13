@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2BC79A89-D025-42B3-BDF1-E6A6D1E73031"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB5AC499-73B1-40EF-84AC-D206E4060352"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoList/Controllers/CategoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "tableView(_:editActionsForRowAt:for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AB5AC499-73B1-40EF-84AC-D206E4060352 - 237b2436bc08b6b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDoList.CategoryViewController.tableView(_: __C.UITableView, editActionsForRowAt: Foundation.IndexPath, for: SwipeCellKit.SwipeActionsOrientation) -&gt; Swift.Optional&lt;Swift.Array&lt;SwipeCellKit.SwipeAction&gt;&gt;"
+                  moduleName = "ToDoList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brandan.kalsow/Desktop/ToDoList/ToDoList/Controllers/CategoryViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "239">
+               </Location>
+               <Location
+                  uuid = "AB5AC499-73B1-40EF-84AC-D206E4060352 - 2be749ccca25e56d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SwipeCellKit.SwipeAction, Foundation.IndexPath) -&gt; () in ToDoList.CategoryViewController.tableView(_: __C.UITableView, editActionsForRowAt: Foundation.IndexPath, for: SwipeCellKit.SwipeActionsOrientation) -&gt; Swift.Optional&lt;Swift.Array&lt;SwipeCellKit.SwipeAction&gt;&gt;"
+                  moduleName = "ToDoList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brandan.kalsow/Desktop/ToDoList/ToDoList/Controllers/CategoryViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "117">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3426BA75-60B4-4695-9A7F-FF52BA721E48"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoList/Controllers/CategoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "tableView(_:editActionsForRowAt:for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

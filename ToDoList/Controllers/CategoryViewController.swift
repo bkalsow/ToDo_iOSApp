@@ -114,8 +114,9 @@ extension CategoryViewController: SwipeTableViewCellDelegate {
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             //handle action by updating model with deletion
             
-                do{
-                    try self.context.delete(self.categories[indexPath.row])
+            let categoryToDelete = self.categories[indexPath.row]
+            do{
+                    try self.context.delete(categoryToDelete)
                     try self.categories.remove(at: indexPath.row)
                 } catch {
                     print("error deleting category, \(error)")
