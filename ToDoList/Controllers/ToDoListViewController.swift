@@ -21,7 +21,7 @@ class ToDoListViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-       //loadData()
+       loadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,9 +45,12 @@ class ToDoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        //toggle done property of current item
-        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
+       itemArray[indexPath.row].done = !itemArray[indexPath.row].done
         
-        self.saveItems()
+        //context.delete(itemArray[indexPath.row])
+        //itemArray.remove(at: indexPath.row)
+        
+        saveItems()
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -89,15 +92,13 @@ class ToDoListViewController: UITableViewController {
         //refresh the view
         self.tableView.reloadData()
     }
-    /**
+    
     func loadData() {
-        if let data = try? Data(contentsOf: dataFilePath!){
-            let decoder = PropertyListDecoder()
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
             do {
-                itemArray = try decoder.decode([Item].self, from: data)
+                itemArray = try context.fetch(request)
             } catch {
-                print ("Error decoding item array, \(error)")
+                print ("Error fetching data from context, \(error)")
             }
         }
-    } */
-}
+    }
