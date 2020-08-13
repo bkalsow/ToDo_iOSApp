@@ -22,7 +22,6 @@ class CategoryViewControllerTableViewController: UITableViewController {
     }
     
     //MARK: - TableView Datasource Methods
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return categories.count
@@ -39,7 +38,6 @@ class CategoryViewControllerTableViewController: UITableViewController {
     
     
     //MARK: - TableView Delegate Methods
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         performSegue(withIdentifier: "GoToItems", sender: self)
@@ -76,7 +74,6 @@ class CategoryViewControllerTableViewController: UITableViewController {
         }
     
     //MARK: - Add New Categories
-
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
